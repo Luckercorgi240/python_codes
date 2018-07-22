@@ -1,5 +1,6 @@
 class Things:
-	pass
+    def show_introduction(self):
+        print('Hello, I am + ' + type(self).__name__)
 
 class Inanimate(Things):
 	pass
@@ -56,7 +57,7 @@ reginald.eat_food()
 reginald.move()
 reginald.feed_young_with_milk()
 reginald.eat_leaves_from_trees()
-print()
+reginald.show_introduction()
 
 longneck = Giraffes()
 longneck.breathe()
@@ -84,5 +85,5 @@ pan = Humans()
 pan.breathe()
 pan.chew_gum()
 pan.do_stuff()
-pan.eat_food
+pan.eat_food()
 pan.feed_young_with_milk()

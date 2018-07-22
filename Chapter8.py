@@ -57,7 +57,7 @@ reginald.eat_food()
 reginald.move()
 reginald.feed_young_with_milk()
 reginald.eat_leaves_from_trees()
-reginald.show_introduction()
+print()
 
 longneck = Giraffes()
 longneck.breathe()

@@ -14,4 +14,4 @@ names = {'Alabama' : 'Montgomery', 'Alaska' : 'Juneau', 'Arizona' : 'Phoenix', \
 
 x = input('Please type in a state(Make sure the first letter is capital and spelled right!) ')
 print(names[x])
-names.items()
+

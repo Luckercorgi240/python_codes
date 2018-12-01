@@ -17,9 +17,14 @@ class Game:
         self.bg = PhotoImage(file="background.gif")
         w = self.bg.width()
         h = self.bg.height()
-        for x in range(3):
-            for y in range(3):
-                self.canvas.create_image(x * w + x * w, y * h + y * h, image=self.bg, anchor='nw')
+        pic = False
+        for x in range(5):
+            for y in range(5):
+                if pic == True:
+                    self.canvas.create_image(x * w, y * h, image=self.bg, anchor='nw')
+                    pic = False
+                else:
+                    pic = True
         self.sprites = []
         self.running = True
 

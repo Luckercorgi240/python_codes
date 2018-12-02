@@ -15,6 +15,7 @@ class Game:
         self.canvas_height = 500
         self.canvas_width = 500
         self.bg = PhotoImage(file="background.gif")
+        self.bg2 = PhotoImage(file="background2.gif")
         w = self.bg.width()
         h = self.bg.height()
         pic = False
@@ -24,6 +25,7 @@ class Game:
                     self.canvas.create_image(x * w, y * h, image=self.bg, anchor='nw')
                     pic = False
                 else:
+                    self.canvas.create_image(x * w, y * h, image=self.bg2, anchor='nw')
                     pic = True
         self.sprites = []
         self.running = True

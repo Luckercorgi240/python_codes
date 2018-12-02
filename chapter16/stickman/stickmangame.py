@@ -35,6 +35,8 @@ class Game:
             if self.running == True:
                 for sprite in self.sprites:
                     sprite.move()
+            else:
+                self.canvas.create_text(250, 250, text='Congratulations!! You beat the game!', fill='Black', font=('Fixedsys', 10))
             self.tk.update_idletasks()
             self.tk.update()
             time.sleep(0.01)
@@ -234,8 +236,6 @@ class DoorSprite(Sprite):
         self.photo_image = photo_image
         self.image = game.canvas.create_image(x, y, image=self.photo_image, anchor = 'nw')
         self.coordinates = Coords(x, y, x + (width / 2), y + height)
-        #canvas.create_text(200, 200, text="Congratulations!! You beat the game!", fill = 'aqua',\
-        #font=('Comic Sans MS', 25))
         self.endgame = True
 
 g = Game()
@@ -258,8 +258,7 @@ g.sprites.append(platform6)
 g.sprites.append(platform7)
 g.sprites.append(platform8)
 g.sprites.append(platform9)
-g.sprites.append(platform10)
-#door = DoorSprite(g, PhotoImage(file = 'door1.gif'), 45, 30, 40, 35, Canvas)
+g.sprites.append(platform10)                                                                                                         
 door = DoorSprite(g, PhotoImage(file = 'door1.gif'), 45, 30, 40, 35,)
 g.sprites.append(door)
 sf = StickFigureSprite(g)
